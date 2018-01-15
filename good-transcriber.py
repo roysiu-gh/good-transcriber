@@ -26,6 +26,7 @@ for comment in subreddit.stream.comments():
         print("Author: ", comment.author)
         print("Body: ", comment.body)
         print("Score: ", comment.score)
+        print("==============================\n")
 
 print(current_replied)
 
