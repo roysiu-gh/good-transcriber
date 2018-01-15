@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import praw, pdb, re, os
 
+PRAW_BOT_SITE = "good-transcriber"
 REPLIED_FILE = "replied.txt"
 COMMENT_SEARCH = "I am a bot and I thank these amazing humans who are transcribing for the community"
 COMMENT_REPLY = """good ~~bot~~ ~~human~~ bot
@@ -9,7 +10,7 @@ COMMENT_REPLY = """good ~~bot~~ ~~human~~ bot
 
 ^(I am a bot, my initial mission was to thank the transcribers of reddit until I discovered that u/you_are_good_human existed, so I guess I'm doing this instead)"""
 
-reddit = praw.Reddit('good-transcriber')
+reddit = praw.Reddit(PRAW_BOT_SITE)
 subreddit = reddit.subreddit("pythonforengineers")
 
 current_replied = []
